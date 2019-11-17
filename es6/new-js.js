@@ -30,4 +30,4 @@ sd;daga;`)
 console.log(conData)
 
 let lambda = adlflkalsdkfkmt => adlflkalsdkfkmt.toUpperCase() + Date.now()
-console.log(lambda(`asdlkkjfaslkj`))
+console.log(lambda(`12`))
