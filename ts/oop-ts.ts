@@ -1,8 +1,9 @@
-export class Remote {
-    range: number
-    rfBw: number
-    signal: boolean
-    
+import { DeviceFallListener } from './../interfaces';
+export class Remote implements DeviceFallListener {
+    private range: number
+    private rfBw: number
+    private signal: boolean
+
     constructor() {
         this.range = 10
         this.rfBw = 1
@@ -14,6 +15,11 @@ export class Remote {
 
     turnOff() {
         this.signal = false
+    }
+
+    onFall(zldlvkvsaldkr: number) {
+        console.log(`Called only when Free Fall On the Ground`)
+        // sending wa notification
     }
 }
 
