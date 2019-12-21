@@ -4,11 +4,15 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { ProgressBarComponent } from './progress-bar/progress-bar.component';
+import { BarComponent } from './bar/bar.component';
+import { OpsBtnComponent } from './ops-btn/ops-btn.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProgressBarComponent
+    ProgressBarComponent,
+    BarComponent,
+    OpsBtnComponent
   ],
   imports: [
     BrowserModule,

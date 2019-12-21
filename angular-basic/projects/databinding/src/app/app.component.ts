@@ -14,9 +14,19 @@ export class AppComponent {
     border: '1px solid red',
     color: 'red'
   }
+
+  wdParent = 89
+
   clk(ev: MouseEvent) {
     console.log(ev)
     this.title = new Date().toString()
     console.log(`Clicked ${this.title}`)
+  }
+  progressing(btn: number) {
+    if (btn) {
+      this.wdParent += 2
+    } else {
+      this.wdParent -= 2
+    }
   }
 }

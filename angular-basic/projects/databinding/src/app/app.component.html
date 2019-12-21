@@ -27,4 +27,19 @@
       <app-progress-bar></app-progress-bar>
     </div>
   </div>
+  <div class="row broder border border-primary mt-3 p-3">
+    <div class="col-md-12">
+      <app-bar [barWidth]="wdParent"></app-bar>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      {{wdParent}}
+    </div>
+  </div>
+  <div class="row broder border border-primary mt-3 p-3 text-center">
+    <div class="col-md-12">
+      <app-ops-btn (progress)="progressing($event)"></app-ops-btn>
+    </div>
+  </div>
 </div>
