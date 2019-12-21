@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -17,6 +17,12 @@ export class AppComponent {
 
   wdParent = 89
 
+  @ViewChild('ipHi', { static: false }) // angular8 
+  ipjjjjjjjj: ElementRef
+
+  @ViewChild('para', { static: false })
+  para: ElementRef
+
   clk(ev: MouseEvent) {
     console.log(ev)
     this.title = new Date().toString()
@@ -28,5 +34,12 @@ export class AppComponent {
     } else {
       this.wdParent -= 2
     }
+  }
+
+  sayHi(/*ip: any*/) {
+    console.log(this.ipjjjjjjjj.nativeElement)
+    this.ipjjjjjjjj.nativeElement.style.border = '2px solid red'
+
+    console.log(this.para.nativeElement)
   }
 }

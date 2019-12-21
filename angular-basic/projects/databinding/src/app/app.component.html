@@ -10,11 +10,11 @@
       <p [style.border]="brd" [style.color]="rd"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem,
         eligendi quo quod facere ratione minima rerum fuga laudantium quae similique illum voluptas harum dignissimos
         debitis nostrum, expedita maiores perferendis molestias!</p>
-        <p>
-          <input type="{{typ}}" >
-          <input [type]="typ" >
-          <input type="text" [ngStyle]="sty">
-        </p>
+      <p>
+        <input type="{{typ}}">
+        <input [type]="typ">
+        <input type="text" [ngStyle]="sty">
+      </p>
     </div>
   </div>
   <div class="row">
@@ -39,7 +39,18 @@
   </div>
   <div class="row broder border border-primary mt-3 p-3 text-center">
     <div class="col-md-12">
-      <app-ops-btn (progress)="progressing($event)"></app-ops-btn>
+      <app-ops-btn (progress)="progressing($event)">
+        <p #para class="alert alert-info">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint in aut magnam nostrum
+          voluptates corrupti voluptatibus asperiores vitae nam? Provident quo, possimus cum nostrum sapiente accusamus
+          quia fugiat distinctio officiis?</p>
+      </app-ops-btn>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-md-12">
+      <input type="text" placeholder="Hi" #ipHi>
+      <input type="button" value="Okay" class="btn btn-info" (click)="sayHi()">
     </div>
   </div>
 </div>
