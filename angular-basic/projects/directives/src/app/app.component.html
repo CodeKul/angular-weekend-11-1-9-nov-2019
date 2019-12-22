@@ -1,0 +1,61 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <input type="button" value="Show Invoices" class="btn btn-info" (click)="isTab = !isTab">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <ng-template [ngIf]="isTab">
+        <p class="alert alert-info" >
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam nulla earum molestias aspernatur soluta
+          placeat quas totam maiores quibusdam. Ipsum quisquam, neque provident facilis nulla consectetur iure dolore
+          nam obcaecati.
+        </p>
+      </ng-template>
+    </div>
+  </div>
+  <table *ngIf="isTab" class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Date</th>
+        <th scope="col">To</th>
+        <th scope="col">From</th>
+        <th scope="col">Amount</th>
+        <th scope="col">Qty</th>
+        <th scope="col">GST</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let invoice of invoices;let sr = index;">
+        <th scope="row">{{sr+1}}</th>
+        <td>{{invoice?.date}}</td>
+        <td>{{invoice?.to}}</td>
+        <td>{{invoice?.from}}</td>
+        <td><input type="number" [value]="invoice?.amount"></td>
+        <td><input type="number" [value]="invoice?.qty"></td>
+        <td><input type="number" [value]="invoice?.gst"></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="row mt-3">
+    <div class="col-md-12">
+      <p [ngStyle]="sty">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae minus quod distinctio maiores. Porro perferendis dicta expedita asperiores neque numquam aspernatur excepturi autem illo non. Sunt quis voluptatibus dolorum! Aperiam.
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <p [ngClass]="{ 'alert' : true, 'alert-info' : isInfo , 'alert-danger' : isDanger }"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum cumque ex non itaque enim ipsam possimus iure ab provident porro dolorem aliquid, perferendis consequatur sit quos neque repudiandae numquam. Recusandae? </p>
+    </div>
+  </div>
+  <div class="row">
+      <div class="col-md-12">
+        <input type="button" class="btn btn-info" value="Info" (click)="isInfo = !isInfo">
+        <input type="button" class="btn btn-danger" value="Danger" (click)="isDanger = !isDanger">
+      </div>
+    </div>
+</div>
