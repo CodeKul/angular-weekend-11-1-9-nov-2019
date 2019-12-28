@@ -7,7 +7,7 @@
   <div class="row">
     <div class="col-md-12">
       <ng-template [ngIf]="isTab">
-        <p class="alert alert-info" >
+        <p class="alert alert-info">
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam nulla earum molestias aspernatur soluta
           placeat quas totam maiores quibusdam. Ipsum quisquam, neque provident facilis nulla consectetur iure dolore
           nam obcaecati.
@@ -43,19 +43,29 @@
   <div class="row mt-3">
     <div class="col-md-12">
       <p [ngStyle]="sty">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae minus quod distinctio maiores. Porro perferendis dicta expedita asperiores neque numquam aspernatur excepturi autem illo non. Sunt quis voluptatibus dolorum! Aperiam.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae minus quod distinctio maiores. Porro perferendis
+        dicta expedita asperiores neque numquam aspernatur excepturi autem illo non. Sunt quis voluptatibus dolorum!
+        Aperiam.
       </p>
     </div>
   </div>
   <div class="row">
     <div class="col-md-12">
-      <p [ngClass]="{ 'alert' : true, 'alert-info' : isInfo , 'alert-danger' : isDanger }"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum cumque ex non itaque enim ipsam possimus iure ab provident porro dolorem aliquid, perferendis consequatur sit quos neque repudiandae numquam. Recusandae? </p>
+      <p [ngClass]="{ 'alert' : true, 'alert-info' : isInfo , 'alert-danger' : isDanger }"> Lorem ipsum dolor sit amet
+        consectetur adipisicing elit. Voluptatum cumque ex non itaque enim ipsam possimus iure ab provident porro
+        dolorem aliquid, perferendis consequatur sit quos neque repudiandae numquam. Recusandae? </p>
     </div>
   </div>
   <div class="row">
-      <div class="col-md-12">
-        <input type="button" class="btn btn-info" value="Info" (click)="isInfo = !isInfo">
-        <input type="button" class="btn btn-danger" value="Danger" (click)="isDanger = !isDanger">
-      </div>
+    <div class="col-md-12">
+      <input type="button" class="btn btn-info" value="Info" (click)="isInfo = !isInfo">
+      <input type="button" class="btn btn-danger" value="Danger" (click)="isDanger = !isDanger">
     </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <input type="text" value="" [pass]="'3px solid red'">
+    </div>
+  </div>
 </div>
