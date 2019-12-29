@@ -22,11 +22,12 @@ export class IpBxComponent implements OnInit {
   onQtyCh() {
     console.log(this.qty)
     this.logic.qty = this.qty
+    this.logic.calAndEm()
   }
 
   onPriceCh() {
     console.log(this.price)
     this.logic.price = this.price
-    this.logic.total = (this.logic.price * this.logic.qty) + this.logic.tax
+    this.logic.calAndEm()
   }
 }

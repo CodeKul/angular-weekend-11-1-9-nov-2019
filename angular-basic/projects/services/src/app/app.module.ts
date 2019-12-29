@@ -1,5 +1,5 @@
 import { FormsModule } from '@angular/forms';
-import { LogicalService } from './logical.service';
+import { LogicalService, DataService } from './logical.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -19,7 +19,7 @@ import { FnlBxComponent } from './fnl-bx/fnl-bx.component';
     BrowserModule,
     FormsModule
   ],
-  providers: [LogicalService],
+  // providers: [LogicalService, DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

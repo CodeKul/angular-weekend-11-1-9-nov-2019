@@ -16,11 +16,14 @@ export class StyBxComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.logic.em.subscribe(total => {
+      this.total = total
+    })
   }
 
   onTaxCh() {
     console.log(this.tax)
     this.logic.tax = this.tax
-    this.total = (this.logic.price * this.logic.qty) + this.logic.tax
-   }
+    this.logic.calAndEm()
+  }
 }
