@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-analytics',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AnalyticsComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit() {
+  }
+
+  toChart(chart: number) {
+    if (chart === 1)
+      this.router.navigate(['pie'])
+    else if (chart === 2)
+      this.router.navigate(['line'])
+    else
+      this.router.navigate(['bar'])
   }
 
 }

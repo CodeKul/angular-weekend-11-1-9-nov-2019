@@ -1,1 +1,22 @@
-<p>analytics works!</p>
+<div class="container mt-3">
+    <div class="row text-center">
+        <div class="col-md-12 text-center">
+            <h6 class="text-muted">
+                Analytics
+            </h6>    
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <input type="button" value="Pie Charts" class="btn btn-outline-primary" (click)="toChart(1)">
+            <input type="button" value="Line Chart" class="btn btn-outline-secondary ml-1" (click)="toChart(2)">
+            <input type="button" value="Bar Chart" class="btn btn-outline-info ml-1" (click)="toChart(3)">
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-md-12">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>
