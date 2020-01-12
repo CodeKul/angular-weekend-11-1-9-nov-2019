@@ -18,10 +18,6 @@ export class ProfileGuard implements CanActivate {
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): boolean | UrlTree {
 
-    const url = 'profile/10'
-    console.log('Validity in Gurad', this.login.isValid)
-    const profiePageTree = this.router.parseUrl(url)
-    console.log(profiePageTree.toString())
-    return this.login.isValid ? profiePageTree : new UrlTree()
+    return this.login.isValid ? this.login.isValid : this.router.createUrlTree(['/fp', 'sample'])
   }
 }
