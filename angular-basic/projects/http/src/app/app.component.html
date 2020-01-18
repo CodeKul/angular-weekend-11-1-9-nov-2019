@@ -6,7 +6,17 @@
   </div>
   <div class="row">
     <div class="col-md-12">
-      <input type="button" value="Okay" class="btn btn-info">
+      <input type="button" value="Okay" class="btn btn-info" (click)="onClk()">
+    </div>
+  </div>
+  <div class="row">
+    <div class="card" style="width: 18rem;" *ngFor="let user of users">
+      <img class="card-img-top" [src]="user?.avatar" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">{{user?.email}}</h5>
+        <p class="card-text">{{user?.first_name}} {{user?.last_name}}</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
     </div>
   </div>
 </div>

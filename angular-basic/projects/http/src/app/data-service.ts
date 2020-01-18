@@ -1,8 +1,14 @@
 import { Observable, Observer } from 'rxjs';
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Users } from './domain';
 
 @Injectable({ providedIn: 'root' })
 export class DataService {
+
+    constructor(
+        private http : HttpClient
+    ) { }
 
     manageAsyncAd(): Observable<number> {
         return Observable.create(
@@ -14,5 +20,9 @@ export class DataService {
                 obs.complete()
             }
         )
+    }
+
+    listUsers() : Observable<Users> {
+        return this.http.get<Users>('https://reqres.in/api/users?page=2')
     }
 }
